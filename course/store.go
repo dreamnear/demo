@@ -3,6 +3,11 @@ package course
 import (
 	"database/sql"
 	"fmt"
+
+	// Database drivers - registered via init()
+	_ "github.com/go-sql-driver/mysql"
+	_ "github.com/jackc/pgx/v5/stdlib"
+	_ "modernc.org/sqlite"
 )
 
 // Store provides database operations for courses.
